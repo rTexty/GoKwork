@@ -1,0 +1,33 @@
+linters:
+  enable:
+    - gofmt          # Проверяет форматирование кода
+    - govet          # Официальный анализатор Go
+    - errcheck       # Проверяет необработанные ошибки
+    - staticcheck    # Продвинутый статический анализ
+    - gosimple       # Упрощение кода
+    - ineffassign    # Неиспользуемые присваивания
+    - unused         # Неиспользуемый код
+    - typecheck      # Проверка типов
+    - gocyclo        # Цикломатическая сложность
+    - misspell       # Опечатки в комментариях
+    - revive         # Быстрая замена golint
+    - gosec          # Проверка безопасности
+
+linters-settings:
+  gocyclo:
+    min-complexity: 15  # Максимальная сложность функции
+
+  errcheck:
+    check-blank: true   # Проверять _ = err
+
+  govet:
+    enable-all: true
+
+run:
+  timeout: 5m
+  tests: true           # Проверять тестовые файлы
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0

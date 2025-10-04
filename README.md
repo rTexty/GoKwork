@@ -252,6 +252,28 @@ client, err := kwork.NewClient(kwork.Config{
 })
 ```
 
+## Разработка
+
+### Линтер
+
+Проект использует `golangci-lint` для проверки качества кода.
+
+**Установка:**
+```bash
+brew install golangci-lint
+```
+
+**Запуск:**
+```bash
+# Проверка кода
+golangci-lint run
+
+# С автоисправлением
+golangci-lint run --fix
+```
+
+Конфигурация находится в `.golangci.yml`
+
 ## Зависимости
 
 - `github.com/gorilla/websocket` - WebSocket клиент
